@@ -1,0 +1,26 @@
+{
+  "name": "personal_blog",
+  "version": "1.0.0",
+  "description": "Repository for my first blog site",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=DEV node ./src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/riboney"
+  },
+  "author": "ironbe#4809",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.7",
+    "winston": "^3.6.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "jest": "^27.5.1"
+  }
+}
