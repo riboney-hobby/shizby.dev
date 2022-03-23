@@ -4,7 +4,7 @@
   "description": "Repository for my first blog site",
   "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cross-env NODE_ENV=TEST jest --verbose --runInBand",
     "dev": "cross-env NODE_ENV=DEV node ./src/index.js"
   },
   "repository": {
