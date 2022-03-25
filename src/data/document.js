@@ -9,11 +9,11 @@ const jsonTransformer = {
 } 
 
 const mongooseModel = (name, paths) => {
-    const blogSchema = new mongoose.Schema(paths)
+    const schema = new mongoose.Schema(paths)
 
-    blogSchema.set('toJSON', jsonTransformer)
+    schema.set('toJSON', jsonTransformer)
 
-    return mongoose.model(name, blogSchema)
+    return mongoose.model(name, schema)
 }
 
 module.exports = mongooseModel
