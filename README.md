@@ -1,21 +1,28 @@
 # My Personal Website
 
-## Built with
+## Dev Stack
 
 - Docker
 - NodeJs
+- Express
 - MongoDB
 - Mongoose
-- Handlebars
+- Angular
 - Bootstrap
 
-## Features
+## Planned Features
+
+- Landing page
+  - Projects gallery
+  - Contact me form
 
 - Blogging
-  - Simple blogging CMS with markdown support
-  - Protected routes with OpenID OAuth 
-  - Sluggified routes to blog posts
+  - Custom blogging CMS with markdown support
+  - Blog commenting integration
+  - Authentication
+  - Sluggified urls 
   - Search by title
-  - Search by tag
+  - Filter by tags
+  - Sort by date
+  - Image upload
   - Pagination
-- 
