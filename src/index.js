@@ -1,4 +1,5 @@
 const server = require('./http/server')
+const db = require('./data/database')
 const logger = require('./globals/logger')
 const env = require('./globals/env')
 
@@ -6,11 +7,12 @@ const bootUp = async () => {
     try{
         logger.info('Booting up application!')
         const promises = [
-            server.connect(env.PORT, env.HOSTNAME)
+            server.connect(env.PORT, env.HOSTNAME),
+            db.startDB(env.MONGO_URI)
         ]
-
+        
         const connections = await Promise.all(promises)
-        return connections[0]
+        return connections
     } catch (err) {
         logger.error(`Error in booting application!\n${err}`)
         process.exit(1)
@@ -21,7 +23,8 @@ const bootDown = async (server) => {
     try{
         logger.info('Booting down application!')
         await Promise.all([
-            server.disconnect(server)
+            server.disconnect(server),
+            db.stopDB()
         ])
 
         process.exit(0)
@@ -32,8 +35,10 @@ const bootDown = async (server) => {
 }
 
 const main = async () => {
-    const http = await bootUp()
+    const connections = await bootUp()
+    const http = connections[0]
     process.on('SIGINT', async () => await bootDown(server))
 }
 
 main()
+db.watchDB()
