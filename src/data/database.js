@@ -13,7 +13,6 @@ const startDB = async (URI) => {
 }
 
 const stopDB = async () => {
-    await driver.disconnect()
     if(mongod)
         localDb.stopMongoInstance(mongod)
     
