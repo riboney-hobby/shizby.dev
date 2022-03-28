@@ -1,4 +1,4 @@
-# My Personal Website
+# MEAN Blogger
 
 ## Planned Dev Stack
 
