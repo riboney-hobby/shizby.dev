@@ -1,6 +1,6 @@
 # My Personal Website
 
-## Dev Stack
+## Planned Dev Stack
 
 - Docker
 - NodeJs
@@ -8,7 +8,7 @@
 - MongoDB
 - Mongoose
 - Angular
-- Bootstrap
+- Angular Material UI
 
 ## Planned Features
 
