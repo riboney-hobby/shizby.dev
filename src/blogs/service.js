@@ -41,7 +41,7 @@ const updateById = async (id, data) => {
 const removeById = async () => {
     if(!id) throw new CompileError('Required id argument is missing')
 
-    return dao.removeById(id)
+    return await dao.removeById(id)
 }
 
 module.exports = {
